@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fredoka", sans-serif;
+}
+:root {
+  --dark: #14141e;
+  --blue: #1e81e9;
+  --white: #f9f9f9;
+  --border: #d6d6d6;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 0%,
+    var(--blue) 50%,
+    var(--dark) 50%,
+    var(--dark) 100%
+  );
+  align-items: center;
+  padding: 16px;
+  color: var(--dark);
+}
+.board {
+  padding: 24px;
+  width: 640px;
+  min-height: 640px;
+  max-width: 100%;
+  background-color: var(--white);
+  border-radius: 20px;
+  text-align: center;
+}
+.board h1 {
+  margin-bottom: 16px;
+  font-size: 36px;
+  font-weight: 400;
+}
+.select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  font-weight: 300;
+}
+.select button {
+  width: 120px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--white);
+  letter-spacing: 1px;
+}
+.select button:hover {
+  cursor: pointer;
+}
+#alphabets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#alphabets button {
+  width: 44px;
+  height: 44px;
+  margin: 8px;
+  font-size: 20px;
+  border: 1px var(--border) solid;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+#alphabets button:hover {
+  cursor: pointer;
+}
+.btn {
+  width: 120px;
+  height: 44px;
+  margin-top: 44px;
+  font-size: 20px;
+  border: 1px var(--border) solid;
+  background-color: var(--white);
+  border-radius: 8px;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.score {
+  margin: 16px 0;
+}
+.score img {
+  width: 220px;
+  aspect-ratio: 1;
+}
+#guess {
+  font-size: 24px;
+  letter-spacing: 5px;
+  padding: 16px 0;
+}
+.active {
+  background-color: var(--blue) !important;
+  color: var(--white);
+}
+.disable {
+  background-color: var(--border) !important;
+  pointer-events: none !important;
+}
+@media only screen and (max-width: 560px) {
+  .board {
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .board h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .select button {
+    width: auto;
+    padding: 0 12px;
+    border-radius: 12px;
+  }
+  #guess {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+  #alphabets button {
+    width: 36px;
+    height: 36px;
+    margin: 4px;
+    font-size: 16px;
+  }
+}
